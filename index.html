@@ -1,0 +1,2500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mayurr Infratech - Trusted Real Estate Partner</title>
+    <meta
+      name="description"
+      content="Mayurr Infratech offers premium real estate opportunities — from serene farm house residencies to India's most ambitious smart city project, Dholera SIR."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: #fff8f0;
+        color: #1a1a1a;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* ─── UTILITIES ─── */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .text-orange {
+        color: #f97316;
+      }
+      .text-amber {
+        color: #fbbf24;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #f97316;
+        color: #fff;
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+        transition: all 0.2s;
+      }
+      .btn-primary:hover {
+        background: #ea6c0a;
+        box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 999px;
+        border: 2px solid #fff;
+        cursor: pointer;
+        font-size: 15px;
+        transition: all 0.2s;
+      }
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+      .section-tag {
+        display: inline-block;
+        color: #f97316;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 12px;
+      }
+      .section-title {
+        font-size: clamp(26px, 4vw, 38px);
+        font-weight: 800;
+        color: #111;
+        margin-bottom: 16px;
+      }
+      .section-divider {
+        width: 96px;
+        height: 4px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #f97316, #fbbf24);
+        margin: 20px auto 0;
+      }
+      .section-desc {
+        color: #6b7280;
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* ─── NAVBAR ─── */
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(8px);
+        border-bottom: 3px solid #f97316;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .nav-brand img {
+        height: 52px;
+        width: auto;
+        object-fit: contain;
+      }
+      .nav-tagline {
+        font-size: 11px;
+        color: #f97316;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .nav-links a {
+        padding: 8px 14px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #374151;
+        border-radius: 8px;
+        transition: all 0.2s;
+      }
+      .nav-links a:hover {
+        color: #f97316;
+        background: #fff7ed;
+      }
+      .nav-cta {
+        margin-left: 12px;
+        padding: 10px 22px;
+        background: #f97316;
+        color: #fff;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 14px;
+        transition: all 0.2s;
+      }
+      .nav-cta:hover {
+        background: #ea6c0a !important;
+        color: #fff;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #374151;
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+      .mobile-menu {
+        display: none;
+        background: #fff;
+        border-top: 1px solid #fed7aa;
+        padding: 12px 16px;
+      }
+      .mobile-menu.open {
+        display: block;
+      }
+      .mobile-menu a {
+        display: block;
+        padding: 12px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #374151;
+        border-radius: 8px;
+        transition: all 0.2s;
+      }
+      .mobile-menu a:hover {
+        color: #f97316;
+        background: #fff7ed;
+      }
+      .mobile-cta {
+        display: block;
+        margin-top: 8px;
+        padding: 12px;
+        text-align: center;
+        background: #f97316;
+        color: #fff !important;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+
+      /* ─── HERO ─── */
+      #home {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+          135deg,
+          #ea580c 0%,
+          #f97316 50%,
+          #fbbf24 100%
+        );
+        position: relative;
+        overflow: hidden;
+        padding-top: 70px;
+      }
+      .hero-blob {
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        pointer-events: none;
+      }
+      .hero-blob2 {
+        position: absolute;
+        bottom: -150px;
+        left: -150px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.04);
+        pointer-events: none;
+      }
+      .hero-wave {
+        position: absolute;
+        right: 0;
+      }
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        padding: 60px 0;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 999px;
+        padding: 8px 18px;
+        margin-bottom: 24px;
+      }
+      .hero-badge .dot {
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        border-radius: 50%;
+      }
+      .hero-badge span {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .hero-title {
+        font-size: clamp(36px, 5vw, 58px);
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 20px;
+      }
+      .hero-title .line2 {
+        color: #fde68a;
+        display: block;
+      }
+      .hero-desc {
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 17px;
+        line-height: 1.7;
+        margin-bottom: 32px;
+        max-width: 480px;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 48px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 32px;
+      }
+      .hero-stat {
+        text-align: center;
+      }
+      .hero-stat .val {
+        font-size: 32px;
+        font-weight: 900;
+        color: #fff;
+      }
+      .hero-stat .lbl {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 500;
+        margin-top: 4px;
+      }
+      .hero-visual {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .hero-logo-card {
+        width: 320px;
+        height: 320px;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+      }
+      .hero-logo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .hero-trust-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 320px;
+      }
+      .hero-trust-item {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 14px;
+        padding: 12px 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .hero-trust-item .icon {
+        font-size: 20px;
+      }
+
+      /* ─── ABOUT ─── */
+      #about {
+        padding: 100px 0;
+        background: #fff;
+      }
+      .about-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-bottom: 64px;
+      }
+      .feature-card {
+        background: #fff7ed;
+        border-radius: 20px;
+        padding: 28px;
+        transition: all 0.3s;
+        cursor: default;
+      }
+      .feature-card:hover {
+        background: #f97316;
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(249, 115, 22, 0.25);
+      }
+      .feature-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        background: #f97316;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+      }
+      .feature-card:hover .feature-icon {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .feature-title {
+        font-size: 17px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 8px;
+        transition: color 0.3s;
+      }
+      .feature-card:hover .feature-title {
+        color: #fff;
+      }
+      .feature-desc {
+        font-size: 13px;
+        color: #6b7280;
+        line-height: 1.6;
+        transition: color 0.3s;
+      }
+      .feature-card:hover .feature-desc {
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .mission-box {
+        background: linear-gradient(135deg, #f97316, #fbbf24);
+        border-radius: 28px;
+        padding: 60px;
+        text-align: center;
+        color: #fff;
+      }
+      .mission-box .emoji {
+        font-size: 52px;
+        margin-bottom: 16px;
+      }
+      .mission-box h3 {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+      .mission-box p {
+        font-size: 17px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.88);
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      /* ─── PROJECTS ─── */
+      #projects {
+        padding: 100px 0;
+        background: linear-gradient(180deg, #fff 0%, #fff7ed 100%);
+      }
+      .projects-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .project-card {
+        background: #fff;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        border: 1px solid #fed7aa;
+      }
+      .project-badge {
+        background: linear-gradient(90deg, #f97316, #fbbf24);
+        padding: 18px 32px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .project-badge .badge-icon {
+        font-size: 28px;
+      }
+      .project-badge .badge-title {
+        color: #fff;
+        font-weight: 800;
+        font-size: 20px;
+      }
+      .project-badge .badge-sub {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 13px;
+      }
+      .badge-available {
+        margin-left: auto;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 5px 14px;
+        border-radius: 999px;
+      }
+      .project-body {
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+      .gallery-main {
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+        background: #e5e7eb;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+      }
+      .gallery-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s;
+      }
+      .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+        padding: 16px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .gallery-thumbs {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .gallery-thumb {
+        flex-shrink: 0;
+        width: 64px;
+        height: 48px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.2s;
+        opacity: 0.65;
+      }
+      .gallery-thumb.active {
+        border-color: #f97316;
+        opacity: 1;
+        box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+      }
+      .gallery-thumb:hover {
+        opacity: 0.9;
+      }
+      .gallery-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .project-info h2 {
+        font-size: 32px;
+        font-weight: 800;
+        color: #111;
+        margin-bottom: 6px;
+      }
+      .project-info .sub {
+        font-size: 18px;
+        font-weight: 600;
+        color: #f97316;
+        margin-bottom: 18px;
+      }
+      .project-info p {
+        font-size: 14px;
+        color: #6b7280;
+        line-height: 1.75;
+        margin-bottom: 20px;
+      }
+      .location-box {
+        background: #fff7ed;
+        border: 1px solid #fed7aa;
+        border-radius: 14px;
+        padding: 14px 18px;
+        margin-bottom: 20px;
+      }
+      .location-box .loc-title {
+        font-weight: 700;
+        color: #111;
+        font-size: 14px;
+      }
+      .location-box .loc-sub {
+        font-size: 12px;
+        color: #6b7280;
+        margin-top: 3px;
+      }
+      .highlights-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+      .highlight-item {
+        background: #f9fafb;
+        border-radius: 12px;
+        padding: 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .highlight-item .hi-icon {
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+      .highlight-item .hi-title {
+        font-size: 12px;
+        font-weight: 700;
+        color: #111;
+      }
+      .highlight-item .hi-desc {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+
+      /* ─── DHOLERA ─── */
+      #dholera {
+        padding: 100px 0;
+        background: #fff;
+      }
+      .dholera-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .dholera-hero {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        margin-bottom: 40px;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+      }
+      .dholera-hero img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        display: block;
+      }
+      .dholera-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.75) 0%,
+          rgba(0, 0, 0, 0.3) 60%,
+          transparent 100%
+        );
+        display: flex;
+        align-items: center;
+        padding: 40px;
+      }
+      .dholera-hero-content .live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #f97316;
+        border-radius: 999px;
+        padding: 6px 16px;
+        margin-bottom: 16px;
+      }
+      .live-dot {
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        border-radius: 50%;
+      }
+      .live-text {
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .dholera-hero-content h3 {
+        font-size: 42px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 12px;
+      }
+      .dholera-hero-content p {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 460px;
+        line-height: 1.6;
+      }
+      .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+      .stat-box {
+        background: linear-gradient(135deg, #f97316, #fbbf24);
+        border-radius: 20px;
+        padding: 24px;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(249, 115, 22, 0.25);
+      }
+      .stat-box .sv {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 4px;
+      }
+      .stat-box .sl {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+      }
+      .tabs {
+        display: flex;
+        gap: 4px;
+        background: #fff7ed;
+        border-radius: 14px;
+        padding: 5px;
+        width: fit-content;
+        margin-bottom: 32px;
+      }
+      .tab-btn {
+        padding: 10px 22px;
+        border-radius: 10px;
+        border: none;
+        background: none;
+        font-size: 14px;
+        font-weight: 600;
+        color: #6b7280;
+        cursor: pointer;
+        text-transform: capitalize;
+        transition: all 0.2s;
+      }
+      .tab-btn.active {
+        background: #f97316;
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+      }
+      .tab-panel {
+        display: none;
+      }
+      .tab-panel.active {
+        display: block;
+      }
+      .features-grid-dholera {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+      .dholera-feature {
+        background: #fff;
+        border: 1px solid #fed7aa;
+        border-radius: 18px;
+        padding: 20px;
+        transition: all 0.2s;
+        cursor: default;
+      }
+      .dholera-feature:hover {
+        border-color: #f97316;
+        box-shadow: 0 6px 20px rgba(249, 115, 22, 0.12);
+        transform: translateY(-2px);
+      }
+      .df-icon {
+        font-size: 30px;
+        margin-bottom: 12px;
+      }
+      .df-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 6px;
+      }
+      .dholera-feature:hover .df-title {
+        color: #f97316;
+      }
+      .df-desc {
+        font-size: 12px;
+        color: #6b7280;
+        line-height: 1.6;
+      }
+      .infra-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .infra-card {
+        background: #fff;
+        border: 1px solid #fed7aa;
+        border-radius: 18px;
+        padding: 24px;
+      }
+      .infra-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      .infra-icon {
+        width: 48px;
+        height: 48px;
+        background: #fff7ed;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+      .infra-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #111;
+      }
+      .infra-list {
+        list-style: none;
+      }
+      .infra-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 13px;
+        color: #6b7280;
+        padding: 6px 0;
+        border-bottom: 1px solid #f3f4f6;
+      }
+      .infra-list li:last-child {
+        border-bottom: none;
+      }
+      .infra-check {
+        color: #f97316;
+        flex-shrink: 0;
+        font-weight: 700;
+      }
+      .invest-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .invest-card {
+        background: linear-gradient(135deg, #fff7ed, #fffbeb);
+        border: 1px solid #fed7aa;
+        border-radius: 18px;
+        padding: 24px;
+      }
+      .invest-card h4 {
+        font-size: 18px;
+        font-weight: 800;
+        color: #111;
+        margin-bottom: 16px;
+      }
+      .invest-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #fed7aa;
+      }
+      .invest-row:last-child {
+        border-bottom: none;
+      }
+      .invest-row .ir-name {
+        font-size: 13px;
+        font-weight: 600;
+        color: #111;
+      }
+      .invest-row .ir-sector {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+      .invest-row .ir-val {
+        font-size: 13px;
+        font-weight: 700;
+        color: #f97316;
+      }
+      .sector-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid #fed7aa;
+      }
+      .sector-row:last-child {
+        border-bottom: none;
+      }
+      .sector-icon {
+        font-size: 18px;
+      }
+      .sector-name {
+        font-size: 13px;
+        font-weight: 600;
+        color: #111;
+        flex: 1;
+      }
+      .check-green {
+        color: #22c55e;
+        font-weight: 700;
+      }
+      .invest-cta {
+        background: linear-gradient(90deg, #f97316, #fbbf24);
+        border-radius: 20px;
+        padding: 48px;
+        text-align: center;
+        color: #fff;
+        margin-top: 20px;
+      }
+      .invest-cta h4 {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      .invest-cta .big-val {
+        font-size: 48px;
+        font-weight: 900;
+        margin-bottom: 12px;
+      }
+      .invest-cta p {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.88);
+        max-width: 500px;
+        margin: 0 auto 24px;
+      }
+      .invest-cta .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        color: #f97316;
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 999px;
+        transition: all 0.2s;
+      }
+      .invest-cta .cta-btn:hover {
+        background: #fff7ed;
+      }
+
+      /* ─── OWNER ─── */
+      #owner {
+        padding: 100px 0;
+        background: linear-gradient(180deg, #fff7ed 0%, #fff 100%);
+      }
+      .owner-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .owner-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .owner-photo-wrap {
+        display: flex;
+        justify-content: center;
+      }
+      .owner-photo-ring {
+        position: relative;
+        width: 320px;
+        height: 320px;
+      }
+      .owner-photo-ring .dashed-ring {
+        position: absolute;
+        inset: -16px;
+        border: 3px dashed #fed7aa;
+        border-radius: 50%;
+      }
+      .owner-photo-ring .photo-circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #fff;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      }
+      .owner-photo-ring .photo-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+      .owner-exp-badge {
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #f97316;
+        color: #fff;
+        border-radius: 18px;
+        padding: 12px 28px;
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(249, 115, 22, 0.35);
+        white-space: nowrap;
+      }
+      .owner-exp-badge .exp-val {
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .owner-exp-badge .exp-lbl {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .owner-info .owner-tag {
+        display: inline-flex;
+        align-items: center;
+        background: #fff7ed;
+        color: #f97316;
+        border-radius: 999px;
+        padding: 6px 18px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+      .owner-info h2 {
+        font-size: 40px;
+        font-weight: 900;
+        color: #111;
+        margin-bottom: 6px;
+      }
+      .owner-info .owner-role {
+        font-size: 18px;
+        font-weight: 600;
+        color: #f97316;
+        margin-bottom: 20px;
+      }
+      .owner-info p {
+        font-size: 14px;
+        color: #6b7280;
+        line-height: 1.75;
+        margin-bottom: 16px;
+      }
+      .owner-achievements {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 28px;
+      }
+      .owner-ach {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff7ed;
+        border: 1px solid #fed7aa;
+        border-radius: 14px;
+        padding: 12px 16px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #374151;
+      }
+      .owner-ach .ach-icon {
+        font-size: 20px;
+      }
+      .owner-contacts a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #374151;
+        transition: color 0.2s;
+      }
+      .owner-contacts a:hover {
+        color: #f97316;
+      }
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        background: #fff7ed;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        flex-shrink: 0;
+        transition: background 0.2s;
+      }
+      .owner-contacts a:hover .contact-icon {
+        background: #f97316;
+      }
+
+      /* ─── CONTACT ─── */
+      #contact {
+        padding: 100px 0;
+        background: linear-gradient(180deg, #fff 0%, #fff7ed 100%);
+      }
+      .contact-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .contact-inner {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 48px;
+      }
+      .contact-info .ci-logo {
+        height: 64px;
+        width: auto;
+        object-fit: contain;
+        margin-bottom: 20px;
+      }
+      .contact-info p {
+        font-size: 14px;
+        color: #6b7280;
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+      .contact-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        background: #fff;
+        border: 1px solid #fed7aa;
+        border-radius: 18px;
+        padding: 18px;
+        margin-bottom: 12px;
+        transition: all 0.2s;
+      }
+      .contact-card:hover {
+        border-color: #f97316;
+        box-shadow: 0 4px 16px rgba(249, 115, 22, 0.12);
+      }
+      .cc-icon {
+        width: 48px;
+        height: 48px;
+        background: #f97316;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        flex-shrink: 0;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+      }
+      .cc-lbl {
+        font-size: 11px;
+        color: #9ca3af;
+        font-weight: 500;
+        margin-bottom: 3px;
+      }
+      .cc-val {
+        font-size: 15px;
+        font-weight: 700;
+        color: #111;
+      }
+      .cc-sub {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+      .wa-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 16px;
+        background: #22c55e;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        border-radius: 18px;
+        margin-top: 16px;
+        transition: all 0.2s;
+        border: none;
+        cursor: pointer;
+      }
+      .wa-btn:hover {
+        background: #16a34a;
+        box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+      }
+      .enquiry-form-wrap {
+        background: #fff;
+        border-radius: 24px;
+        padding: 40px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+        border: 1px solid #fed7aa;
+      }
+      .enquiry-form-wrap h3 {
+        font-size: 24px;
+        font-weight: 800;
+        color: #111;
+        margin-bottom: 6px;
+      }
+      .enquiry-form-wrap .form-sub {
+        font-size: 13px;
+        color: #6b7280;
+        margin-bottom: 24px;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .form-group {
+        margin-bottom: 16px;
+      }
+      .form-group label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 6px;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 13px 16px;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 12px;
+        font-size: 14px;
+        font-family: inherit;
+        transition: all 0.2s;
+        outline: none;
+        background: #fff;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: #f97316;
+        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+      }
+      .form-group textarea {
+        resize: none;
+      }
+      .form-submit {
+        width: 100%;
+        padding: 16px;
+        background: #f97316;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-family: inherit;
+      }
+      .form-submit:hover {
+        background: #ea6c0a;
+        box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
+      }
+      .form-success {
+        text-align: center;
+        padding: 48px 0;
+        display: none;
+      }
+      .success-icon {
+        width: 80px;
+        height: 80px;
+        background: #dcfce7;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        margin: 0 auto 20px;
+      }
+      .form-success h3 {
+        font-size: 26px;
+        font-weight: 800;
+        color: #111;
+        margin-bottom: 8px;
+      }
+      .form-success p {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 24px;
+      }
+      .form-success button {
+        padding: 12px 28px;
+        background: #f97316;
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      /* ─── FOOTER ─── */
+      footer {
+        background: #111827;
+        color: #fff;
+      }
+      .footer-main {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 48px;
+        padding: 64px 0;
+      }
+      .footer-brand img {
+        height: 64px;
+        width: auto;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+        margin-bottom: 20px;
+      }
+      .footer-brand p {
+        font-size: 13px;
+        color: #9ca3af;
+        line-height: 1.7;
+        max-width: 320px;
+        margin-bottom: 20px;
+      }
+      .footer-contact-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: #f97316;
+        margin-bottom: 8px;
+        transition: color 0.2s;
+      }
+      .footer-contact-link:hover {
+        color: #fbbf24;
+      }
+      .footer-col h4 {
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 20px;
+      }
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col ul li {
+        margin-bottom: 10px;
+      }
+      .footer-col ul li a {
+        font-size: 13px;
+        color: #9ca3af;
+        transition: color 0.2s;
+      }
+      .footer-col ul li a:hover {
+        color: #f97316;
+      }
+      .footer-bottom {
+        border-top: 1px solid #1f2937;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .footer-bottom p {
+        font-size: 12px;
+        color: #6b7280;
+      }
+      .footer-live {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .footer-live-dot {
+        width: 8px;
+        height: 8px;
+        background: #f97316;
+        border-radius: 50%;
+      }
+      .footer-live span {
+        font-size: 12px;
+        color: #6b7280;
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 1024px) {
+        .features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .features-grid-dholera {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hero-inner {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+        .hero-visual {
+          display: none;
+        }
+        .project-body {
+          grid-template-columns: 1fr;
+        }
+        .owner-inner {
+          grid-template-columns: 1fr;
+          gap: 80px;
+        }
+        .owner-photo-wrap {
+          margin-bottom: 32px;
+        }
+        .contact-inner {
+          grid-template-columns: 1fr;
+        }
+        .footer-main {
+          grid-template-columns: 1fr 1fr;
+        }
+        .invest-grid {
+          grid-template-columns: 1fr;
+        }
+        .infra-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+        .features-grid-dholera {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stats-bar {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .highlights-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-stats {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .owner-achievements {
+          grid-template-columns: 1fr;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+        .footer-main {
+          grid-template-columns: 1fr;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 8px;
+          text-align: center;
+        }
+        .mission-box {
+          padding: 32px 24px;
+        }
+        .project-body {
+          padding: 24px;
+        }
+        .dholera-hero-content h3 {
+          font-size: 28px;
+        }
+        .features-grid-dholera {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════ -->
+    <nav id="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <div class="nav-brand">
+            <img src="company-logo.png" alt="Mayurr Infratech Logo" />
+            <div class="nav-tagline">Trusted Real Estate Partner</div>
+          </div>
+          <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#dholera">Dholera Smart City</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-cta">Get in Touch</a>
+          </div>
+          <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <a href="#dholera" onclick="closeMenu()">Dholera Smart City</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+        <a href="#contact" class="mobile-cta" onclick="closeMenu()"
+          >Get in Touch</a
+        >
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════ -->
+    <section id="home">
+      <div class="hero-blob"></div>
+      <div class="hero-blob2"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <!-- Left -->
+          <div>
+            <div class="hero-badge">
+              <span class="dot"></span>
+              <span>India's Trusted Real Estate Partner</span>
+            </div>
+            <h1 class="hero-title">
+              Building Your
+              <span class="line2">Dream Investments</span>
+              With Trust
+            </h1>
+            <p class="hero-desc">
+              Mayurr Infratech offers premium real estate opportunities — from
+              serene farm house residencies to India's most ambitious smart city
+              project, Dholera SIR.
+            </p>
+            <div class="hero-btns">
+              <a href="#projects" class="btn-primary">🏗️ Explore Projects</a>
+              <a href="#contact" class="btn-outline">📞 Contact Us</a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="val">10+</div>
+                <div class="lbl">Years Experience</div>
+              </div>
+              <div class="hero-stat">
+                <div class="val">500+</div>
+                <div class="lbl">Happy Clients</div>
+              </div>
+              <div class="hero-stat">
+                <div class="val">2</div>
+                <div class="lbl">Landmark Projects</div>
+              </div>
+            </div>
+          </div>
+          <!-- Right -->
+          <div class="hero-visual">
+            <div class="hero-logo-card">
+              <img src="company-logo.png" alt="Mayurr Infratech" />
+            </div>
+            <div class="hero-trust-grid">
+              <div class="hero-trust-item">
+                <span class="icon">🏆</span> Award Winning
+              </div>
+              <div class="hero-trust-item">
+                <span class="icon">🔒</span> 100% Secure
+              </div>
+              <div class="hero-trust-item">
+                <span class="icon">📍</span> Prime Locations
+              </div>
+              <div class="hero-trust-item">
+                <span class="icon">💎</span> Premium Quality
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave">
+        <svg
+          viewBox="0 0 1440 80"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 80L1440 80L1440 40C1440 40 1200 0 720 0C240 0 0 40 0 40L0 80Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════ -->
+    <section id="about">
+      <div class="container">
+        <div class="about-header">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">
+            Why Choose <span class="text-orange">Mayurr Infratech?</span>
+          </h2>
+          <p class="section-desc">
+            With over a decade of experience, we have established ourselves as a
+            leading real estate company bringing premium property investments to
+            discerning investors across India.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <div class="feature-title">Trusted & Transparent</div>
+            <div class="feature-desc">
+              We believe in building lasting relationships through honest
+              dealings and complete transparency in every transaction.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📍</div>
+            <div class="feature-title">Prime Locations</div>
+            <div class="feature-desc">
+              Carefully selected properties in high-growth areas offering
+              maximum appreciation potential for your investment.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <div class="feature-title">High ROI</div>
+            <div class="feature-desc">
+              Our strategic projects are designed to deliver superior returns on
+              investment compared to conventional real estate.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <div class="feature-title">Expert Team</div>
+            <div class="feature-desc">
+              A dedicated team of experienced professionals committed to guiding
+              you at every step of your investment journey.
+            </div>
+          </div>
+        </div>
+
+        <div class="mission-box">
+          <div class="emoji">🏗️</div>
+          <h3>Our Mission</h3>
+          <p>
+            To empower every Indian family and investor with premium real estate
+            opportunities that combine strategic location, superior quality, and
+            exceptional value — building a foundation of trust that lasts for
+            generations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     PROJECTS — TIJARA
+══════════════════════════════════════════════════ -->
+    <section id="projects">
+      <div class="container">
+        <div class="projects-header">
+          <span class="section-tag">Our Projects</span>
+          <h2 class="section-title">
+            Landmark <span class="text-orange">Real Estate Projects</span>
+          </h2>
+          <p class="section-desc">
+            Discover our carefully curated properties designed for investors who
+            value quality, location, and long-term growth.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-badge">
+            <span class="badge-icon">🏡</span>
+            <div>
+              <div class="badge-title">Project 1</div>
+              <div class="badge-sub">Tijara Residency Farm House</div>
+            </div>
+            <span class="badge-available">Available Now</span>
+          </div>
+          <div class="project-body">
+            <!-- Gallery -->
+            <div>
+              <div class="gallery-main">
+                <img
+                  id="galleryMain"
+                  src="tejara1.jpeg"
+                  alt="Tijara Residency"
+                />
+                <div class="gallery-caption" id="galleryCaption">
+                  Tijara Residency — Site Development
+                </div>
+              </div>
+              <div class="gallery-thumbs">
+                <div class="gallery-thumb active" onclick="selectThumb(0)">
+                  <img src="tejara1.jpeg" alt="" />
+                </div>
+                <div class="gallery-thumb" onclick="selectThumb(1)">
+                  <img src="tejara2.jpeg" alt="" />
+                </div>
+                <div class="gallery-thumb" onclick="selectThumb(2)">
+                  <img src="tejara3.jpeg" alt="" />
+                </div>
+                <div class="gallery-thumb" onclick="selectThumb(3)">
+                  <img src="tejara4.jpeg" alt="" />
+                </div>
+                <div class="gallery-thumb" onclick="selectThumb(4)">
+                  <img src="tejara5.jpeg" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- Info -->
+            <div class="project-info">
+              <h2>Tijara Residency</h2>
+              <div class="sub">Farm House &amp; Residential Plots</div>
+              <p>
+                Nestled in the scenic landscape of Tijara, Rajasthan — Tijara
+                Residency Farm House offers a perfect blend of peaceful
+                countryside living and modern conveniences. An ideal investment
+                for those seeking a serene getaway or a long-term appreciating
+                asset.
+              </p>
+              <div class="location-box">
+                <div class="loc-title">
+                  📍 Location: Tijara, Alwar, Rajasthan
+                </div>
+                <div class="loc-sub">
+                  Close to NCR, Jaipur Highway &amp; Alwar City
+                </div>
+              </div>
+              <div class="highlights-grid">
+                <div class="highlight-item">
+                  <span class="hi-icon">🌳</span>
+                  <div>
+                    <div class="hi-title">Green &amp; Serene</div>
+                    <div class="hi-desc">
+                      Surrounded by nature with lush greenery
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="hi-icon">🏡</span>
+                  <div>
+                    <div class="hi-title">Farm House Plots</div>
+                    <div class="hi-desc">
+                      Premium residential farm house plots
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="hi-icon">🛡️</span>
+                  <div>
+                    <div class="hi-title">Legal &amp; Clear Title</div>
+                    <div class="hi-desc">
+                      100% legally clear with proper docs
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="hi-icon">🚗</span>
+                  <div>
+                    <div class="hi-title">Well Connected</div>
+                    <div class="hi-desc">
+                      Excellent road connectivity to NCR
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="hi-icon">💧</span>
+                  <div>
+                    <div class="hi-title">Water Availability</div>
+                    <div class="hi-desc">
+                      Assured water supply with infrastructure
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="hi-icon">⚡</span>
+                  <div>
+                    <div class="hi-title">Electricity Supply</div>
+                    <div class="hi-desc">
+                      24/7 power with proper grid connections
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="#contact" class="btn-primary"
+                >📞 Enquire About Tijara Residency</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     DHOLERA SMART CITY
+══════════════════════════════════════════════════ -->
+    <section id="dholera">
+      <div class="container">
+        <div class="dholera-header">
+          <span class="section-tag">Project 2</span>
+          <h2 class="section-title">
+            Dholera <span class="text-orange">Smart City</span>
+          </h2>
+          <p class="section-desc">
+            India's First Greenfield Smart Industrial City — A
+            once-in-a-generation investment opportunity
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="dholera-hero">
+          <img
+            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80"
+            alt="Dholera Smart City"
+          />
+          <div class="dholera-hero-overlay">
+            <div class="dholera-hero-content">
+              <div class="live-badge">
+                <span class="live-dot"></span
+                ><span class="live-text">Active Development</span>
+              </div>
+              <h3>Dholera SIR</h3>
+              <p>
+                India's most ambitious smart city — designed to become a global
+                manufacturing and trading hub with ₹6+ lakh crore in committed
+                investments.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-bar">
+          <div class="stat-box">
+            <div class="sv">₹6+ Lakh Cr</div>
+            <div class="sl">Investment Committed</div>
+          </div>
+          <div class="stat-box">
+            <div class="sv">920 sq km</div>
+            <div class="sl">Total Area</div>
+          </div>
+          <div class="stat-box">
+            <div class="sv">2 Million</div>
+            <div class="sl">Population by 2040</div>
+          </div>
+          <div class="stat-box">
+            <div class="sv">5,000 MW</div>
+            <div class="sl">Solar Capacity</div>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" onclick="switchTab('overview')">
+            Overview
+          </button>
+          <button class="tab-btn" onclick="switchTab('infrastructure')">
+            Infrastructure
+          </button>
+          <button class="tab-btn" onclick="switchTab('investment')">
+            Investment
+          </button>
+        </div>
+
+        <!-- Overview Tab -->
+        <div class="tab-panel active" id="tab-overview">
+          <div class="features-grid-dholera">
+            <div class="dholera-feature">
+              <div class="df-icon">🏭</div>
+              <div class="df-title">Strategic Location</div>
+              <div class="df-desc">
+                Located in Gujarat, within the Delhi-Mumbai Industrial Corridor
+                — India's most industrialized state
+              </div>
+            </div>
+            <div class="dholera-feature">
+              <div class="df-icon">🌐</div>
+              <div class="df-title">World-Class Infrastructure</div>
+              <div class="df-desc">
+                Underground utilities, smart grids, high-speed data
+                connectivity, and advanced drainage systems
+              </div>
+            </div>
+            <div class="dholera-feature">
+              <div class="df-icon">⚡</div>
+              <div class="df-title">5,000 MW Solar Park</div>
+              <div class="df-desc">
+                One of the world's largest solar parks, spanning ~11,000
+                hectares near the Gulf of Khambhat
+              </div>
+            </div>
+            <div class="dholera-feature">
+              <div class="df-icon">✈️</div>
+              <div class="df-title">International Airport</div>
+              <div class="df-desc">
+                A380-compatible airport spanning ~1,426 hectares for cargo and
+                passenger flights
+              </div>
+            </div>
+            <div class="dholera-feature">
+              <div class="df-icon">🚄</div>
+              <div class="df-title">High-Speed Connectivity</div>
+              <div class="df-desc">
+                109 km expressway + metro rail connecting to Ahmedabad,
+                Gandhinagar &amp; GIFT City
+              </div>
+            </div>
+            <div class="dholera-feature">
+              <div class="df-icon">💻</div>
+              <div class="df-title">Semiconductor Hub</div>
+              <div class="df-desc">
+                Tata Electronics' ₹91,000 crore semiconductor plant + Vedanta,
+                Reliance &amp; Adani investments
+              </div>
+            </div>
+            <div class="dholera-feature">
+              <div class="df-icon">🏙️</div>
+              <div class="df-title">Smart City Features</div>
+              <div class="df-desc">
+                Intelligent traffic, CCTV analytics, automated waste collection,
+                SCADA water &amp; power systems
+              </div>
+            </div>
+            <div class="dholera-feature">
+              <div class="df-icon">👨‍💼</div>
+              <div class="df-title">8 Lakh+ Jobs</div>
+              <div class="df-desc">
+                Expected to generate lakhs of direct &amp; indirect jobs across
+                manufacturing, IT &amp; logistics
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infrastructure Tab -->
+        <div class="tab-panel" id="tab-infrastructure">
+          <div class="infra-grid">
+            <div class="infra-card">
+              <div class="infra-card-header">
+                <div class="infra-icon">🛣️</div>
+                <div class="infra-title">Ahmedabad–Dholera Expressway</div>
+              </div>
+              <ul class="infra-list">
+                <li>
+                  <span class="infra-check">✓</span> Length: ~109 km, Sarkhej to
+                  Adhelai
+                </li>
+                <li><span class="infra-check">✓</span> Cost: ~₹3,500 crore</li>
+                <li>
+                  <span class="infra-check">✓</span> Expandable from 4 to 8/12
+                  lanes
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> Drastically reduces travel
+                  time
+                </li>
+              </ul>
+            </div>
+            <div class="infra-card">
+              <div class="infra-card-header">
+                <div class="infra-icon">✈️</div>
+                <div class="infra-title">Dholera International Airport</div>
+              </div>
+              <ul class="infra-list">
+                <li>
+                  <span class="infra-check">✓</span> Land Area: ~1,426 hectares
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> A380-compatible 4,000 m
+                  runways
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> Cargo and passenger traffic
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> Site clearance &amp;
+                  Defence NOC obtained
+                </li>
+              </ul>
+            </div>
+            <div class="infra-card">
+              <div class="infra-card-header">
+                <div class="infra-icon">🚄</div>
+                <div class="infra-title">Metro &amp; High-Speed Rail</div>
+              </div>
+              <ul class="infra-list">
+                <li>
+                  <span class="infra-check">✓</span> ~100 km network coverage
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> Connecting Ahmedabad,
+                  Gandhinagar, GIFT City
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> Ridership: 1.7 million by
+                  2031
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> Seamless airport
+                  connectivity
+                </li>
+              </ul>
+            </div>
+            <div class="infra-card">
+              <div class="infra-card-header">
+                <div class="infra-icon">🏛️</div>
+                <div class="infra-title">ABCD Building &amp; Governance</div>
+              </div>
+              <ul class="infra-list">
+                <li>
+                  <span class="infra-check">✓</span> Administrative &amp;
+                  Business Centre
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> Single-window clearance for
+                  all approvals
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> Command &amp; Control
+                  Center
+                </li>
+                <li>
+                  <span class="infra-check">✓</span> Real-time city monitoring
+                  via SCADA
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Investment Tab -->
+        <div class="tab-panel" id="tab-investment">
+          <div class="invest-grid">
+            <div class="invest-card">
+              <h4>💰 Major Investors</h4>
+              <div class="invest-row">
+                <div>
+                  <div class="ir-name">Tata Electronics</div>
+                  <div class="ir-sector">Semiconductor Fab</div>
+                </div>
+                <div class="ir-val">₹91,000 Cr</div>
+              </div>
+              <div class="invest-row">
+                <div>
+                  <div class="ir-name">Reliance Industries</div>
+                  <div class="ir-sector">Green Energy &amp; Manufacturing</div>
+                </div>
+                <div class="ir-val">Major</div>
+              </div>
+              <div class="invest-row">
+                <div>
+                  <div class="ir-name">Adani Group</div>
+                  <div class="ir-sector">Data Centers &amp; Infrastructure</div>
+                </div>
+                <div class="ir-val">Major</div>
+              </div>
+              <div class="invest-row">
+                <div>
+                  <div class="ir-name">Vedanta Limited</div>
+                  <div class="ir-sector">Semiconductor Ecosystem</div>
+                </div>
+                <div class="ir-val">Significant</div>
+              </div>
+              <div class="invest-row">
+                <div>
+                  <div class="ir-name">Global Firms</div>
+                  <div class="ir-sector">Tillman Global, Tsingshan Group</div>
+                </div>
+                <div class="ir-val">Multiple</div>
+              </div>
+            </div>
+            <div class="invest-card">
+              <h4>📈 Key Sectors</h4>
+              <div class="sector-row">
+                <span class="sector-icon">💻</span
+                ><span class="sector-name">Semiconductors</span
+                ><span class="check-green">✓</span>
+              </div>
+              <div class="sector-row">
+                <span class="sector-icon">☀️</span
+                ><span class="sector-name">Renewable Energy</span
+                ><span class="check-green">✓</span>
+              </div>
+              <div class="sector-row">
+                <span class="sector-icon">🖥️</span
+                ><span class="sector-name">Data Centers</span
+                ><span class="check-green">✓</span>
+              </div>
+              <div class="sector-row">
+                <span class="sector-icon">🔋</span
+                ><span class="sector-name">EV &amp; Battery Manufacturing</span
+                ><span class="check-green">✓</span>
+              </div>
+              <div class="sector-row">
+                <span class="sector-icon">⚙️</span
+                ><span class="sector-name">Heavy Engineering</span
+                ><span class="check-green">✓</span>
+              </div>
+              <div class="sector-row">
+                <span class="sector-icon">📦</span
+                ><span class="sector-name">Logistics &amp; Warehousing</span
+                ><span class="check-green">✓</span>
+              </div>
+            </div>
+          </div>
+          <div class="invest-cta">
+            <h4>Total Investment Commitment</h4>
+            <div class="big-val">₹6+ Lakh Crore</div>
+            <p>
+              Dholera SIR has attracted over ₹6 lakh crore in investment
+              commitments from domestic and international investors — making it
+              India's most invested smart city project.
+            </p>
+            <a href="#contact" class="cta-btn">Invest in Dholera →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     OWNER / LEADERSHIP
+══════════════════════════════════════════════════ -->
+    <section id="owner">
+      <div class="container">
+        <div class="owner-header">
+          <span class="section-tag">Leadership</span>
+          <h2 class="section-title">
+            Meet Our <span class="text-orange">Founder &amp; Director</span>
+          </h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="owner-inner">
+          <div class="owner-photo-wrap">
+            <div class="owner-photo-ring">
+              <div class="dashed-ring"></div>
+              <div class="photo-circle">
+                <img
+                  src="owner-photo.png"
+                  alt="Sanjay Sharma - Founder, Mayurr Infratech"
+                />
+              </div>
+              <div class="owner-exp-badge">
+                <div class="exp-val">10+ Years</div>
+                <div class="exp-lbl">Real Estate Experience</div>
+              </div>
+            </div>
+          </div>
+          <div class="owner-info">
+            <div class="owner-tag">Founder &amp; Managing Director</div>
+            <h2>Sanjay Sharma</h2>
+            <div class="owner-role">Mayurr Infratech</div>
+            <p>
+              Mr. Sanjay Sharma is a visionary entrepreneur with over a decade
+              of experience in the real estate and infrastructure sector. With a
+              keen eye for high-growth investment opportunities, he has guided
+              hundreds of investors to make profitable and secure real estate
+              investments across India.
+            </p>
+            <p>
+              His deep expertise in identifying emerging real estate corridors —
+              from Tijara's scenic farm house plots to Dholera Smart City — has
+              made Mayurr Infratech a trusted name for investors seeking premium
+              properties with high appreciation potential.
+            </p>
+            <div class="owner-achievements">
+              <div class="owner-ach">
+                <span class="ach-icon">🏆</span> 500+ Satisfied Investors
+              </div>
+              <div class="owner-ach">
+                <span class="ach-icon">🌐</span> Pan-India Network
+              </div>
+              <div class="owner-ach">
+                <span class="ach-icon">📜</span> RERA Compliant Projects
+              </div>
+              <div class="owner-ach">
+                <span class="ach-icon">🤝</span> Transparent Dealings
+              </div>
+            </div>
+            <div class="owner-contacts">
+              <a href="tel:+919817963556">
+                <div class="contact-icon">📞</div>
+                +91-9817963556
+              </a>
+              <a href="mailto:info@mayurrinfratech.com">
+                <div class="contact-icon">✉️</div>
+                info@mayurrinfratech.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════ -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">
+            Contact <span class="text-orange">Mayurr Infratech</span>
+          </h2>
+          <p class="section-desc">
+            Interested in our projects? Reach out and our team will get back to
+            you within 24 hours.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+        <div class="contact-inner">
+          <!-- Info -->
+          <div class="contact-info">
+            <img
+              src="company-logo.png"
+              alt="Mayurr Infratech"
+              class="ci-logo"
+            />
+            <p>
+              We're here to help you find the perfect real estate investment.
+              Contact us today for personalized guidance on our projects.
+            </p>
+            <a
+              href="tel:+919817963556"
+              class="contact-card"
+              style="display: flex; text-decoration: none; color: inherit"
+            >
+              <div class="cc-icon">📞</div>
+              <div>
+                <div class="cc-lbl">Call Us</div>
+                <div class="cc-val">+91-9817963556</div>
+                <div class="cc-sub">Mon–Sat, 9 AM – 7 PM</div>
+              </div>
+            </a>
+            <a
+              href="mailto:info@mayurrinfratech.com"
+              class="contact-card"
+              style="display: flex; text-decoration: none; color: inherit"
+            >
+              <div class="cc-icon">✉️</div>
+              <div>
+                <div class="cc-lbl">Email Us</div>
+                <div class="cc-val">info@mayurrinfratech.com</div>
+                <div class="cc-sub">We reply within 24 hours</div>
+              </div>
+            </a>
+            <div class="contact-card">
+              <div class="cc-icon">📍</div>
+              <div>
+                <div class="cc-lbl">Our Projects</div>
+                <div class="cc-val">Tijara, Rajasthan</div>
+                <div class="cc-sub">&amp; Dholera, Gujarat</div>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/919817963556?text=Hello%20Mayurr%20Infratech%2C%20I%20am%20interested%20in%20your%20real%20estate%20projects."
+              target="_blank"
+              rel="noopener"
+              class="wa-btn"
+            >
+              💬 WhatsApp Us Now
+            </a>
+          </div>
+
+          <!-- Form -->
+          <div class="enquiry-form-wrap">
+            <div id="formContent">
+              <h3>Send Enquiry</h3>
+              <p class="form-sub">
+                Fill in your details and we'll get back to you with all
+                information.
+              </p>
+
+              <form action="https://forminit.com/f/x2rknptjbkv" method="POST">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Full Name *</label>
+                    <input
+                      type="text"
+                      name="fi-sender-fullName"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input
+                      type="tel"
+                      name="fi-sender-phone"
+                      placeholder="+91 90518 50147"
+                      pattern="^\+91\d{10}$"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Email Address *</label>
+                  <input
+                    type="email"
+                    name="fi-sender-email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Interested Project *</label>
+                  <select name="fi-select-project" required>
+                    <option value="">Select a project</option>
+                    <option value="tijara">Tijara Residency Farm House</option>
+                    <option value="dholera">Dholera Smart City</option>
+                    <option value="both">Both Projects</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Message</label>
+                  <textarea
+                    name="fi-text-message"
+                    rows="4"
+                    placeholder="Tell us more..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  style="
+                    padding: 10px;
+                    border-radius: 20px;
+                    background: #f97316;
+                    border: none;
+                  "
+                >
+                  Submit Enquiry
+                </button>
+              </form>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <div class="success-icon">✅</div>
+              <h3>Thank You!</h3>
+              <p>
+                Your enquiry has been submitted. Our team will contact you
+                within 24 hours.
+              </p>
+              <button onclick="resetForm()">Submit Another Enquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════ -->
+    <footer>
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <img src="company-logo.png" alt="Mayurr Infratech" />
+            <p>
+              Mayurr Infratech is a premier real estate company offering
+              strategic investment opportunities in high-growth locations across
+              India. Led by Sanjay Sharma, we are committed to delivering trust,
+              transparency, and value.
+            </p>
+            <a href="tel:+919817963556" class="footer-contact-link"
+              >📞 +91-9817963556</a
+            >
+            <a
+              href="mailto:info@mayurrinfratech.com"
+              class="footer-contact-link"
+              >✉️ info@mayurrinfratech.com</a
+            >
+          </div>
+          <div class="footer-col">
+            <h4>Our Projects</h4>
+            <ul>
+              <li><a href="#projects">→ Tijara Residency Farm House</a></li>
+              <li><a href="#dholera">→ Dholera Smart City</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">→ Home</a></li>
+              <li><a href="#about">→ About Us</a></li>
+              <li><a href="#projects">→ Projects</a></li>
+              <li><a href="#owner">→ Leadership</a></li>
+              <li><a href="#contact">→ Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="year"></span> Mayurr Infratech. All rights reserved. |
+            Designed for Sanjay Sharma
+          </p>
+          <div class="footer-live">
+            <div class="footer-live-dot"></div>
+            <span>Trusted Real Estate Developer</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════════════ -->
+    <script>
+      // Set year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // ── Navbar mobile menu ──
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("open");
+      }
+      function closeMenu() {
+        document.getElementById("mobileMenu").classList.remove("open");
+      }
+
+      // ── Image Gallery ──
+      const galleryImages = [
+        { src: "tejara1.jpeg", caption: "Tijara Residency — Site Development" },
+        {
+          src: "tejara2.jpeg",
+          caption: "Tijara Residency — Construction Progress",
+        },
+        { src: "tejara3.jpeg", caption: "Tijara Residency — Road Development" },
+        {
+          src: "tejara4.jpeg",
+          caption: "Tijara Residency — Boundary Construction",
+        },
+        {
+          src: "tejara5.jpeg",
+          caption: "Tijara Residency — Landscaping Vision",
+        },
+      ];
+
+      function selectThumb(idx) {
+        document.getElementById("galleryMain").src = galleryImages[idx].src;
+        document.getElementById("galleryCaption").textContent =
+          galleryImages[idx].caption;
+        document.querySelectorAll(".gallery-thumb").forEach((t, i) => {
+          t.classList.toggle("active", i === idx);
+        });
+      }
+
+      // ── Dholera Tabs ──
+      function switchTab(name) {
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-panel")
+          .forEach((panel) => panel.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+        document.getElementById("tab-" + name).classList.add("active");
+      }
+
+      // ── Enquiry Form ──
+      function submitForm(e) {
+        e.preventDefault();
+        document.getElementById("formContent").style.display = "none";
+        document.getElementById("formSuccess").style.display = "block";
+      }
+      function resetForm() {
+        document.getElementById("formContent").style.display = "block";
+        document.getElementById("formSuccess").style.display = "none";
+        document.querySelector("form").reset();
+      }
+
+      // ── Smooth scroll offset for fixed nav ──
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            const offset = 80;
+            window.scrollTo({
+              top: target.offsetTop - offset,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
